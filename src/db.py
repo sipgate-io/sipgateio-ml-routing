@@ -10,13 +10,11 @@ load_dotenv(dotenv_path)
 host = os.environ.get("DATABASE_HOST") or 'localhost'
 username = os.environ.get("DATABASE_USERNAME") or 'admin'
 password = os.environ.get("DATABASE_PASSWORD") or 'admin'
-# databaseName = os.environ.get("DATABASE_PASSWORD") or 'database'
 
 mydb = mysql.connector.connect(
     host=host,
     user=username,
-    password=password,
-    # database=databaseName
+    password=password
 )
 
 def execute_query(query):
